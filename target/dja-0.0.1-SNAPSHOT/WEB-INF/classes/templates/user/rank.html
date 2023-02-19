@@ -1,0 +1,59 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Algorithm App</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="/css/common.css" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<div class="container-fluid text-center">
+	<div class="row">
+		<h1>#Algorithm</h1>
+		<h4>Participants: <span th:text="${names}"></span></h4>
+	</div>
+
+	<div class="con">
+		<div class="row suggestionsFirstRow">
+			<div class="col-xs-1">
+				<h3>No</h3>
+			</div>
+			<div class="col-xs-3">
+				<h3>Date</h3>
+			</div>
+			<div class="col-xs-4">
+				<h3>Title</h3>
+			</div>
+			<div class="col-xs-2">
+				<h3>Baekjoon</h3>
+			</div>
+		</div>
+
+		<div th:each="item : ${statisticList}" class="row" th:classappend="${itemStat.count % 2 == 1 ? 'suggestionsOdd' : 'suggestionsEven'}">
+			<div class="col-xs-1">
+				<p th:text="${itemStat.count}"></p>
+			</div>
+			<div class="col-xs-3">
+				<p th:text="${#dates.format(item.createdDate, 'yyyy-MM-dd')}"></p>
+			</div>
+			<div class="col-xs-4">
+				<a th:href="${'https://www.acmicpc.net/status?user_id=' + item.user.name}"><p th:text="${item.user.name}"></p></a>
+			</div>
+			<div class="col-xs-2">
+				<p><span th:if="${item.correctCount < 2}"><span style="color: darkred">&#10008;</span></span><span th:if="${item.correctCount >= 2}"><span style="color: darkgreen">&#10004;</span></span> (<span th:text="${item.correctCount}"></span>)</p>
+			</div>
+		</div>
+
+		<div class="row text-center">
+			<h5><a href="https://github.com/lemondkel" target="_blank">Github</a> | <a
+					href="https://instagram.com/l2jong"
+					target="_blank"> Instagram </a></h5>
+		</div>
+	</div>
+</div>
+</body>
+</html>

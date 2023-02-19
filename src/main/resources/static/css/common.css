@@ -1,0 +1,110 @@
+body {
+	background-color: #ebebeb;
+}
+
+a:link    {color:blue;  text-decoration:none}
+a:visited {color:#000; text-decoration:none}
+a:hover   {color:#f00; text-decoration:none} /* Yellow */
+
+h1{
+	font-family: Lobster, Monospace;
+	font-size: 450%;
+}
+.row{
+	text-transform: capitalize;
+	margin: 6px 0 6px 0;
+	padding: 10px;
+}
+
+p{
+	font-size: 1.1em;
+}
+
+.suggestionsFirstRow{
+	-webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.55);
+	background-color: #8dccc6;
+}
+
+.suggestionsOdd{
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+
+	transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+	background: #aefcf5;
+}
+
+
+.suggestionsEven{
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+
+	transform: perspective(100px) rotateX(-3deg) translateY(3px);
+	background:#a6e3de;
+}
+
+/* hover effects in rows */
+.suggestionsOdd:hover{
+	background-color: #a6e3de;
+	transition:background 0.3s;
+}
+.suggestionsEven:hover{
+	background-color: #aefcf5;
+	transition:background 0.3s;
+}
+
+/* code for arrow, page-up*/
+#return-to-top {
+	position: fixed;
+	index: 999;
+	bottom: 20px;
+	right: 20px;
+	/* I can add here some background-color */
+	border: 1px solid black;
+
+	width: 50px;
+	height: 50px;
+	display: block;
+	text-decoration: none;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	display: none;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#return-to-top i { /* inside arrow */
+	index: 999;
+	color: black;
+	margin: 0;
+	position: relative;
+	left: 16px;
+	top: 13px;
+	font-size: 19px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#return-to-top:hover {
+	background:  #a6e3de;
+}
+#return-to-top:hover i { /* inside arrow */
+	color: black;
+	top: 5px;
+}
+
+.con {
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+
