@@ -52,7 +52,7 @@ public class Job0001 extends DTDJob {
 	 * @author kknni
 	 * @since 2023-02-14
 	 */
-	@Scheduled(cron = "0 10 00 ? * MON") // 왼쪽부터 초/분/시/일/월/요일/[선택]연도 , 매주 월요일 00:10 에 체크
+	@Scheduled(cron = "0 10 00 ? * MON-SUN") // 왼쪽부터 초/분/시/일/월/요일/[선택]연도 , 월요일~일요일 00:10 에 체크
 //	@Scheduled(cron = "0 0/1 * * * *") // 왼쪽부터 초/분/시/일/월/요일/[선택]연도 , 1분마다 체크
 	@Override
 	public void makeJob() {
