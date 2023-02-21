@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Created-By: IntelliJ IDEA
-Built-By: happyjack
-Build-Jdk: 11.0.14
-Implementation-Title: Dujong's AlgorithmApp
-Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: com.lemonfree
-Main-Class: ${start-class}
-
